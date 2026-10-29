@@ -82,9 +82,20 @@ Home page cards get numbered bubbles when you use Material's `grid cards` markup
 </div>
 ```
 
+## Accessibility
+
+Checked with WCAG 2.1 AA in mind, in both modes:
+
+- Text and link colours meet **4.5:1** on every surface they sit on (light ink 12.0:1, light link red `#b43b0a` 4.6 to 5.1:1, muted 5.0 to 5.5:1; dark ink 9.6:1, amber 6.3 to 7.6:1). `tools/contrast.py` prints the ratios, so re-run it after changing a colour.
+- Code highlighting tokens are set per mode so every token passes AA on the code background.
+- Visible focus rings, underlined links, `prefers-reduced-motion` respected, no horizontal scroll at 375px.
+- An axe-core scan (WCAG 2 A/AA plus best-practice) came back clean on the home page, a long note, tables and code pages in light and dark.
+- `overrides/partials/search.html` and `progress.html` fix two unlabeled widgets in Material; `docs/assets/js/a11y.js` gives each code block's action group a unique name. All three are optional.
+- The custom crosshair cursor is plain SVG in CSS, and falls back to the normal cursor on touch screens and in forced-colours mode.
+
 ## Notes
 
-- Tested with Material for MkDocs 9.x. Fonts load from Google Fonts; self-host them if you need no external requests.
+- Tested with Material for MkDocs 9.x (the sidebar width tweaks apply only at desktop widths, so the mobile drawer is unaffected). Fonts load from Google Fonts; self-host them if you need no external requests.
 - Inspired by the blueprint skin of the author's CV site.
 
 ## Licence
