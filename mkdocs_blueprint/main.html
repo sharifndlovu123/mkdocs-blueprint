@@ -1,0 +1,10 @@
+{#- Adds the Blueprint stylesheet and accessibility script on top of Material's base template. -#}
+{% extends "base.html" %}
+{% block styles %}
+  {{ super() }}
+  <link rel="stylesheet" href="{{ 'assets/css/blueprint.css' | url }}">
+{% endblock %}
+{% block scripts %}
+  {{ super() }}
+  <script src="{{ 'assets/js/a11y.js' | url }}"></script>
+{% endblock %}

@@ -1,0 +1,27 @@
+# Blueprint: a drafting-sheet theme that extends Material for MkDocs.
+extends: material
+
+# Defaults; set any of these in your own mkdocs.yml to override.
+language: custom
+font:
+  text: Space Grotesk
+  code: Space Mono
+palette:
+  # Light first with no media query = light by default; the toggle remembers the choice
+  - scheme: default
+    toggle:
+      icon: material/weather-night
+      name: Switch to dark mode
+  - scheme: slate
+    toggle:
+      icon: material/weather-sunny
+      name: Switch to light mode
+features:
+  - navigation.tabs
+  - navigation.tabs.sticky
+  - navigation.sections
+  - navigation.top
+  - content.code.copy
+  - search.highlight
+  - search.suggest
+  - toc.follow

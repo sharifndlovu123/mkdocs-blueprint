@@ -1,6 +1,6 @@
 # mkdocs-blueprint
 
-A drafting-sheet skin for [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/). Paper-and-ink colours, a 32px blueprint grid, Space Grotesk and Space Mono type, dashed rules, numbered callout bubbles and ruled "drawing schedule" tables. It is one CSS file plus an optional template for the mega-menu nav. No plugins.
+A drafting-sheet theme for MkDocs, built on [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/). Paper-and-ink colours, a 32px blueprint grid, Space Grotesk and Space Mono type, dashed rules, numbered callout bubbles, ruled "drawing schedule" tables, a mega-menu navigation and a styled search. Install it with pip and set one line in `mkdocs.yml`.
 
 Light is the default: pale blue paper with navy ink. Dark mode is a blue sheet with pale ink, chosen with the toggle. The accent is red-orange (light) or amber (dark).
 
@@ -24,57 +24,53 @@ Tables tighten to fit, code blocks get a single frame, the menu opens as a plain
   <img src="docs/assets/img/mobile-dark.png" width="23%" alt="Dark mode on a phone">
 </p>
 
-## Use it
+## Install
 
-1. Copy `docs/assets/css/blueprint.css` into your docs folder (for example `docs/assets/css/`).
-2. Point `mkdocs.yml` at it and use the matching fonts and palette:
+```
+$ pip install mkdocs-blueprint
+```
+
+(Until it is on PyPI: `pip install git+https://github.com/sharifndlovu123/mkdocs-blueprint`.)
+
+```yaml
+theme:
+  name: blueprint
+
+plugins:
+  - material/search   # note the prefix: Material only shows its search box for this name
+```
+
+That is all. The theme extends Material, so every Material option still works (`logo`, `favicon`, `features`, `palette`, extra plugins as `material/...`). Blueprint sets these defaults, and you can override any of them:
+
+| Setting | Blueprint default |
+| ------- | ----------------- |
+| `palette` | light first, with a toggle to dark (the choice is remembered) |
+| `font` | Space Grotesk and Space Mono |
+| `language` | `custom` (search says "Search the sheets", "7 sheets match") |
+| `features` | `navigation.tabs`, `navigation.tabs.sticky`, `navigation.sections`, `navigation.top`, `content.code.copy`, `search.highlight`, `search.suggest`, `toc.follow` |
+
+Tip: number your folders and files (`01. Intro.md`) and the left rail becomes a sheet index.
+
+## What it adds to Material
+
+- **Mega-menu:** each top-level section is a tab; hovering or keyboard-focusing one opens a full-width panel of its sub-sections and pages. CSS-only, and long titles wrap (`partials/tabs.html`).
+- **Search:** a boxed mono input with a `/` key hint and an index-style result list, stacked above the nav (`partials/search.html`, `partials/languages/custom.html`).
+- **Accessible widgets:** the search dialog and the page-load bar get proper names, and each code block's action group gets a unique label (`partials/progress.html`, `assets/js/a11y.js`).
+
+## Use only the CSS (no pip)
+
+Prefer to stay on `theme: name: material`? Copy `mkdocs_blueprint/assets/css/blueprint.css` into your docs and add it:
 
 ```yaml
 theme:
   name: material
-  font:
-    text: Space Grotesk
-    code: Space Mono
-  palette:
-    # Light first with no media query = light by default; the toggle remembers the choice
-    - scheme: default
-      toggle:
-        icon: material/weather-night
-        name: Switch to dark mode
-    - scheme: slate
-      toggle:
-        icon: material/weather-sunny
-        name: Switch to light mode
-  features:
-    - navigation.tabs        # sections as top tabs
-    - navigation.tabs.sticky
-    - navigation.sections    # left rail reads like a drawing index
-
+  font: { text: Space Grotesk, code: Space Mono }
+  features: [navigation.tabs, navigation.sections]
 extra_css:
   - assets/css/blueprint.css
 ```
 
-Tip: number your folders and files (`01. Intro.md`) and the left rail becomes a sheet index.
-
-## Mega-menu nav (optional)
-
-Copy `overrides/partials/tabs.html` into an `overrides/partials/` folder in your project and set `custom_dir`:
-
-```yaml
-theme:
-  custom_dir: overrides
-```
-
-Each top-level section becomes a tab. Hovering (or keyboard focusing) one opens a full-width panel listing its sub-sections and pages in columns. It is CSS-only, with no JavaScript, and long titles wrap.
-
-## Search wording (optional)
-
-`overrides/partials/languages/custom.html` changes the search placeholder and result labels ("7 sheets match"). Enable it with:
-
-```yaml
-theme:
-  language: custom
-```
+You then lose the mega-menu and the search wording, which live in the template partials. Copy `mkdocs_blueprint/partials/` into your own `overrides/partials/` and set `custom_dir: overrides` to get them back.
 
 ## Wide screens
 
@@ -82,9 +78,9 @@ From 1600px the page becomes a bordered "drawing sheet" with corner registration
 
 ## Customise
 
-All colours are variables at the top of the file (`--bp-paper`, `--bp-ink`, `--bp-red`, `--bp-muted`, `--bp-panel`, `--bp-grid`). Change those for a different ink or paper. Radius and shadows are removed globally with one rule near the top.
+All colours are variables at the top of `mkdocs_blueprint/assets/css/blueprint.css` (`--bp-paper`, `--bp-ink`, `--bp-red`, `--bp-muted`, `--bp-panel`, `--bp-grid`). Change those for a different ink or paper. Radius and shadows are removed globally with one rule near the top.
 
-Home page cards get numbered bubbles when you use Material's `grid cards` markup:
+Add your own CSS after the theme with `extra_css` to change anything. Home page cards get numbered bubbles when you use Material's `grid cards` markup:
 
 ```markdown
 <div class="grid cards" markdown>
@@ -104,7 +100,7 @@ Checked with WCAG 2.1 AA in mind, in both modes:
 - Code highlighting tokens are set per mode so every token passes AA on the code background.
 - Visible focus rings, underlined links, `prefers-reduced-motion` respected, no horizontal scroll at 375px.
 - An axe-core scan (WCAG 2 A/AA plus best-practice) came back clean on the home page, a long note, tables and code pages in light and dark.
-- `overrides/partials/search.html` and `progress.html` fix two unlabeled widgets in Material; `docs/assets/js/a11y.js` gives each code block's action group a unique name. All three are optional.
+- The packaged partials (`search.html`, `progress.html`) and `a11y.js` fix two unlabelled Material widgets and give each code block's action group a unique name.
 - The custom crosshair cursor is plain SVG in CSS, and falls back to the normal cursor on touch screens and in forced-colours mode.
 
 ## Notes
