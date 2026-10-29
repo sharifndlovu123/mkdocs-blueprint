@@ -21,7 +21,7 @@ classifiers = [
 
 [project.urls]
 Homepage = "https://github.com/sharifndlovu123/mkdocs-blueprint"
-Demo = "https://knowledgemap.devbridge.co.za"
+Demo = "https://knowledgebase.devbridge.co.za"
 
 [project.entry-points."mkdocs.themes"]
 blueprint = "mkdocs_blueprint"

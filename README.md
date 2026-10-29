@@ -4,7 +4,7 @@ A drafting-sheet theme for MkDocs, built on [Material for MkDocs](https://squidf
 
 Light is the default: pale blue paper with navy ink. Dark mode is a blue sheet with pale ink, chosen with the toggle. The accent is red-orange (light) or amber (dark).
 
-**Demo:** this theme runs the author's own [Knowledge Hub](https://knowledgemap.devbridge.co.za), and the screenshots below are from it.
+**Demo:** this theme runs the author's own [Knowledge Hub](https://knowledgebase.devbridge.co.za), and the screenshots below are from it.
 
 ![Home page](docs/assets/img/home.png)
 ![A note with a table and table of contents](docs/assets/img/note.png)
