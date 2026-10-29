@@ -13,6 +13,17 @@ Light is the default: pale blue paper with navy ink. Dark mode is a blue sheet w
 ![Search](docs/assets/img/search.png)
 ![Dark mode](docs/assets/img/dark.png)
 
+## On phones
+
+Tables tighten to fit, code blocks get a single frame, the menu opens as a plain drawer and nothing scrolls sideways.
+
+<p>
+  <img src="docs/assets/img/mobile-home.png" width="23%" alt="Home on a phone">
+  <img src="docs/assets/img/mobile-menu.png" width="23%" alt="Menu drawer">
+  <img src="docs/assets/img/mobile-note.png" width="23%" alt="A note with a table">
+  <img src="docs/assets/img/mobile-dark.png" width="23%" alt="Dark mode on a phone">
+</p>
+
 ## Use it
 
 1. Copy `docs/assets/css/blueprint.css` into your docs folder (for example `docs/assets/css/`).
