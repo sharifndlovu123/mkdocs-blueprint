@@ -4,11 +4,14 @@ A drafting-sheet skin for [Material for MkDocs](https://squidfunk.github.io/mkdo
 
 Light is the default: pale blue paper with navy ink. Dark mode is a blue sheet with pale ink, chosen with the toggle. The accent is red-orange (light) or amber (dark).
 
+**Demo:** this theme runs the author's own [Knowledge Hub](https://www.knowledgemap.devbridge.co.za), and the screenshots below are from it.
+
 ![Home page](docs/assets/img/home.png)
 ![A note with a table and table of contents](docs/assets/img/note.png)
 ![Wide-screen drawing sheet](docs/assets/img/wide.png)
 ![Mega-menu](docs/assets/img/mega-menu.png)
 ![Search](docs/assets/img/search.png)
+![Dark mode](docs/assets/img/dark.png)
 
 ## Use it
 
@@ -96,7 +99,7 @@ Checked with WCAG 2.1 AA in mind, in both modes:
 ## Notes
 
 - Tested with Material for MkDocs 9.x (the sidebar width tweaks apply only at desktop widths, so the mobile drawer is unaffected). Fonts load from Google Fonts; self-host them if you need no external requests.
-- Inspired by the blueprint skin of the author's CV site.
+- Inspired by the blueprint skin of the author's CV site. The sample screenshots show the author's own notes; the theme itself contains no content.
 
 ## Licence
 
