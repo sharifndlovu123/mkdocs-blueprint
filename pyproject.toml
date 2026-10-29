@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "mkdocs-blueprint"
-version = "0.1.0"
+version = "0.2.0"
 description = "A blueprint / drafting-sheet theme for MkDocs, built on Material for MkDocs"
 readme = "README.md"
 license = "MIT"

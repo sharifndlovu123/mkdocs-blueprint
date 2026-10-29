@@ -25,3 +25,6 @@ features:
   - search.highlight
   - search.suggest
   - toc.follow
+
+# Optional first-visit loading screen (shown once per browser session); set `loading_sheet: true` to enable
+loading_sheet: false

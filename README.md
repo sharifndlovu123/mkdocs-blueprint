@@ -92,6 +92,18 @@ Add your own CSS after the theme with `extra_css` to change anything. Home page 
 </div>
 ```
 
+## Loading screen (optional)
+
+Off by default. Turn on a drafting-sheet loading screen that shows once per browser session (first visit only):
+
+```yaml
+theme:
+  name: blueprint
+  loading_sheet: true
+```
+
+It shows your `site_name` and a line that draws across, stays up at least 0.9 s, then fades out when the page has loaded. Esc or a click skips it, a CSS fail-safe hides it after 4 s even if the script fails, and it is skipped for visitors who prefer reduced motion.
+
 ## Accessibility
 
 Checked with WCAG 2.1 AA in mind, in both modes:

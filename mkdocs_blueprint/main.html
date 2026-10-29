@@ -1,8 +1,31 @@
-{#- Adds the Blueprint stylesheet and accessibility script on top of Material's base template. -#}
+{#- Adds the Blueprint stylesheet and accessibility script on top of Material's base template.
+    With `theme: loading_sheet: true` it also shows a drafting-sheet loading screen on the first visit of a session. -#}
 {% extends "base.html" %}
+{% block extrahead %}
+  {{ super() }}
+  {% if config.theme.loading_sheet %}
+  <script>
+    try { if (!sessionStorage.getItem("bp-seen")) document.documentElement.classList.add("bp-loading"); } catch (e) {}
+  </script>
+  {% endif %}
+{% endblock %}
 {% block styles %}
   {{ super() }}
   <link rel="stylesheet" href="{{ 'assets/css/blueprint.css' | url }}">
+{% endblock %}
+{% block announce %}
+  {% if config.theme.loading_sheet %}
+  <div class="bp-load" role="status" aria-live="polite">
+    <div class="bp-load__sheet">
+      <span class="bp-load__tick bp-load__tick--tl"></span><span class="bp-load__tick bp-load__tick--tr"></span>
+      <span class="bp-load__tick bp-load__tick--bl"></span><span class="bp-load__tick bp-load__tick--br"></span>
+      <p class="bp-load__label">SHEET 01 &middot; LOADING</p>
+      <p class="bp-load__title">{{ config.site_name }}</p>
+      <div class="bp-load__line"></div>
+      <p class="bp-load__hint">Press Esc or click to skip</p>
+    </div>
+  </div>
+  {% endif %}
 {% endblock %}
 {% block scripts %}
   {{ super() }}
