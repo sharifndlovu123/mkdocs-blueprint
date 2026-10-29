@@ -2,7 +2,7 @@
 
 A drafting-sheet skin for [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/). Paper-and-ink colours, a 32px blueprint grid, Space Grotesk and Space Mono type, dashed rules, numbered callout bubbles and ruled "drawing schedule" tables. It is one CSS file plus an optional template for the mega-menu nav. No plugins.
 
-Light mode is pale blue paper with navy ink; dark mode is a blue sheet with pale ink. The accent is red-orange (light) or amber (dark).
+Light is the default: pale blue paper with navy ink. Dark mode is a blue sheet with pale ink, chosen with the toggle. The accent is red-orange (light) or amber (dark).
 
 ![Home page](docs/assets/img/home.png)
 ![A note with a table and table of contents](docs/assets/img/note.png)
@@ -21,16 +21,15 @@ theme:
     text: Space Grotesk
     code: Space Mono
   palette:
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
+    # Light first with no media query = light by default; the toggle remembers the choice
+    - scheme: default
       toggle:
         icon: material/weather-night
-        name: Switch to light mode
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
+        name: Switch to dark mode
+    - scheme: slate
       toggle:
         icon: material/weather-sunny
-        name: Switch to dark mode
+        name: Switch to light mode
   features:
     - navigation.tabs        # sections as top tabs
     - navigation.tabs.sticky
