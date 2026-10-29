@@ -1,2 +1,0 @@
-[mkdocs.themes]
-blueprint = mkdocs_blueprint
