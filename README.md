@@ -8,6 +8,7 @@ Light is the default: pale blue paper with navy ink. Dark mode is a blue sheet w
 ![A note with a table and table of contents](docs/assets/img/note.png)
 ![Wide-screen drawing sheet](docs/assets/img/wide.png)
 ![Mega-menu](docs/assets/img/mega-menu.png)
+![Search](docs/assets/img/search.png)
 
 ## Use it
 
@@ -51,6 +52,15 @@ theme:
 ```
 
 Each top-level section becomes a tab. Hovering (or keyboard focusing) one opens a full-width panel listing its sub-sections and pages in columns. It is CSS-only, with no JavaScript, and long titles wrap.
+
+## Search wording (optional)
+
+`overrides/partials/languages/custom.html` changes the search placeholder and result labels ("7 sheets match"). Enable it with:
+
+```yaml
+theme:
+  language: custom
+```
 
 ## Wide screens
 
