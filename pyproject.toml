@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=68"]
+requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -7,14 +7,14 @@ name = "mkdocs-blueprint"
 version = "0.1.0"
 description = "A blueprint / drafting-sheet theme for MkDocs, built on Material for MkDocs"
 readme = "README.md"
-license = { text = "MIT" }
+license = "MIT"
+license-files = ["LICENSE"]
 authors = [{ name = "Sharif Ndlovu" }]
 requires-python = ">=3.8"
 dependencies = ["mkdocs-material>=9.5"]
 keywords = ["mkdocs", "mkdocs-theme", "mkdocs-material", "theme", "documentation"]
 classifiers = [
   "Framework :: MkDocs",
-  "License :: OSI Approved :: MIT License",
   "Programming Language :: Python :: 3",
   "Topic :: Documentation",
 ]
@@ -27,8 +27,11 @@ Demo = "https://knowledgemap.devbridge.co.za"
 blueprint = "mkdocs_blueprint"
 
 [tool.setuptools]
-packages = ["mkdocs_blueprint"]
 include-package-data = true
+
+[tool.setuptools.packages.find]
+include = ["mkdocs_blueprint"]
+namespaces = false
 
 [tool.setuptools.package-data]
 mkdocs_blueprint = ["*.yml", "*.html", "partials/**/*", "assets/**/*"]
