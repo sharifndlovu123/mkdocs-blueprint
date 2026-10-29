@@ -6,22 +6,22 @@ Light is the default: pale blue paper with navy ink. Dark mode is a blue sheet w
 
 **Demo:** this theme runs the author's own [Knowledge Hub](https://knowledgebase.devbridge.co.za), and the screenshots below are from it.
 
-![Home page](docs/assets/img/home.png)
-![A note with a table and table of contents](docs/assets/img/note.png)
-![Wide-screen drawing sheet](docs/assets/img/wide.png)
-![Mega-menu](docs/assets/img/mega-menu.png)
-![Search](docs/assets/img/search.png)
-![Dark mode](docs/assets/img/dark.png)
+![Home page](https://raw.githubusercontent.com/sharifndlovu123/mkdocs-blueprint/main/docs/assets/img/home.png)
+![A note with a table and table of contents](https://raw.githubusercontent.com/sharifndlovu123/mkdocs-blueprint/main/docs/assets/img/note.png)
+![Wide-screen drawing sheet](https://raw.githubusercontent.com/sharifndlovu123/mkdocs-blueprint/main/docs/assets/img/wide.png)
+![Mega-menu](https://raw.githubusercontent.com/sharifndlovu123/mkdocs-blueprint/main/docs/assets/img/mega-menu.png)
+![Search](https://raw.githubusercontent.com/sharifndlovu123/mkdocs-blueprint/main/docs/assets/img/search.png)
+![Dark mode](https://raw.githubusercontent.com/sharifndlovu123/mkdocs-blueprint/main/docs/assets/img/dark.png)
 
 ## On phones
 
 Tables tighten to fit, code blocks get a single frame, the menu opens as a plain drawer and nothing scrolls sideways.
 
 <p>
-  <img src="docs/assets/img/mobile-home.png" width="23%" alt="Home on a phone">
-  <img src="docs/assets/img/mobile-menu.png" width="23%" alt="Menu drawer">
-  <img src="docs/assets/img/mobile-note.png" width="23%" alt="A note with a table">
-  <img src="docs/assets/img/mobile-dark.png" width="23%" alt="Dark mode on a phone">
+  <img src="https://raw.githubusercontent.com/sharifndlovu123/mkdocs-blueprint/main/docs/assets/img/mobile-home.png" width="23%" alt="Home on a phone">
+  <img src="https://raw.githubusercontent.com/sharifndlovu123/mkdocs-blueprint/main/docs/assets/img/mobile-menu.png" width="23%" alt="Menu drawer">
+  <img src="https://raw.githubusercontent.com/sharifndlovu123/mkdocs-blueprint/main/docs/assets/img/mobile-note.png" width="23%" alt="A note with a table">
+  <img src="https://raw.githubusercontent.com/sharifndlovu123/mkdocs-blueprint/main/docs/assets/img/mobile-dark.png" width="23%" alt="Dark mode on a phone">
 </p>
 
 ## Install
