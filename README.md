@@ -30,13 +30,15 @@ theme:
         icon: material/weather-sunny
         name: Switch to dark mode
   features:
-    - navigation.sections   # left rail reads like a drawing index
+    - navigation.tabs        # sections as top tabs
+    - navigation.tabs.sticky
+    - navigation.sections    # left rail reads like a drawing index
 
 extra_css:
   - assets/css/blueprint.css
 ```
 
-Tip: number your folders and files (`01. Intro.md`) and the left rail becomes a sheet index. Drop `navigation.tabs` to keep everything in the rail.
+Tip: number your folders and files (`01. Intro.md`) and the left rail becomes a sheet index.
 
 ## Customise
 
