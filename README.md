@@ -1,11 +1,13 @@
 # mkdocs-blueprint
 
-A drafting-sheet skin for [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/). Paper-and-ink colours, a 32px blueprint grid, Space Grotesk and Space Mono type, dashed rules, numbered callout bubbles and ruled "drawing schedule" tables. It is one CSS file: no template overrides, no plugins.
+A drafting-sheet skin for [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/). Paper-and-ink colours, a 32px blueprint grid, Space Grotesk and Space Mono type, dashed rules, numbered callout bubbles and ruled "drawing schedule" tables. It is one CSS file plus an optional template for the mega-menu nav. No plugins.
 
 Light mode is pale blue paper with navy ink; dark mode is a blue sheet with pale ink. The accent is red-orange (light) or amber (dark).
 
 ![Home page](docs/assets/img/home.png)
 ![A note with a table and table of contents](docs/assets/img/note.png)
+![Wide-screen drawing sheet](docs/assets/img/wide.png)
+![Mega-menu](docs/assets/img/mega-menu.png)
 
 ## Use it
 
@@ -39,6 +41,21 @@ extra_css:
 ```
 
 Tip: number your folders and files (`01. Intro.md`) and the left rail becomes a sheet index.
+
+## Mega-menu nav (optional)
+
+Copy `overrides/partials/tabs.html` into an `overrides/partials/` folder in your project and set `custom_dir`:
+
+```yaml
+theme:
+  custom_dir: overrides
+```
+
+Each top-level section becomes a tab. Hovering (or keyboard focusing) one opens a full-width panel listing its sub-sections and pages in columns. It is CSS-only, with no JavaScript, and long titles wrap.
+
+## Wide screens
+
+From 1600px the page becomes a bordered "drawing sheet" with corner registration marks, tables and code run the full width and prose keeps a readable measure. On very wide screens (2000px) short top-level lists flow into two columns.
 
 ## Customise
 
